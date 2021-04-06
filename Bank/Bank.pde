@@ -1,43 +1,26 @@
-KnapToggle K10Kr = new KnapToggle();
-KnapToggle K100Kr = new KnapToggle();
-KnapToggle K1000Kr = new KnapToggle();
+KnapToggle K10Kr = new KnapToggle(50, 50, "10kr");
+KnapToggle K100Kr = new KnapToggle(200, 50, "100kr");
+KnapToggle K1000Kr = new KnapToggle(350, 50, "1000kr");
 
-Knap Deposit = new KnapToggle();
-KontoFelt Penge = new KontoFelt();
+Knap Deposit = new KnapToggle(50, 250, "Deposit");
+KontoFelt Penge = new KontoFelt(50, 350, "Dine penge:");
 
 void setup(){
+  
   surface.setResizable(true);
-  size(1920,1080);
+  size(500,500);
+  textAlign(CENTER);
+
 }
 
 void draw(){
-background(245);
-K10Kr.display();
-K100Kr.display();
-K1000Kr.display();
-Deposit.display();
-Penge.display();
-}
-
-class Komponent{
-  float x,y,w,h;
-  String tekst;
-
-void display(){}
-}
-
-class KontoFelt extends Komponent{
-  float balance;
-
-  void add(float V_ind){
-    balance += V_ind;
-  }
-}
-
-class Knap extends Komponent{
-  boolean trykket;
-}
-
-class KnapToggle extends Knap{
+  
+  background(245);
+  
+  K10Kr.display();
+  K100Kr.display();
+  K1000Kr.display();
+  Deposit.display();
+  Penge.display();
 
 }
