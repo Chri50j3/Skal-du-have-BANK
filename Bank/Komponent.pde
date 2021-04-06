@@ -10,7 +10,6 @@ class Komponent {
   color colPri = color(200, 0, 0);
   color colSec = color(200);
   float sizeStroke = 1;
-  float sizeStrokeBig = 5;
   
   Komponent(float x_, float y_, String tekst_) {
     

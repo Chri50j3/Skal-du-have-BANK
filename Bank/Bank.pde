@@ -1,11 +1,11 @@
-ArrayList<KnapToggle> knapper = new ArrayList<KnapToggle>();
+KnapToggle K10Kr = new KnapToggle(50, 50, 10);
+KnapToggle K100Kr = new KnapToggle(200, 50, 100);
+KnapToggle K1000Kr = new KnapToggle(350, 50, 1000);
 
-KnapToggle K10Kr = new KnapToggle(50, 50, "10kr");
-KnapToggle K100Kr = new KnapToggle(200, 50, "100kr");
-KnapToggle K1000Kr = new KnapToggle(350, 50, "1000kr");
-
-Knap Deposit = new KnapToggle(50, 250, "Deposit");
+Knap Deposit = new Knap(50, 250, "Deposit");
 KontoFelt Penge = new KontoFelt(50, 350, "Dine penge:");
+
+Knap[] knapper = new Knap[]{K10Kr, K100Kr, K1000Kr, Deposit};
 
 void setup(){
   
@@ -13,25 +13,21 @@ void setup(){
   size(500,500);
   textAlign(CENTER);
 
-  knapper.add(K10Kr);
-  knapper.add(K100Kr);
-  knapper.add(K1000Kr);
-
 }
 
 void draw(){
   
   background(245);
   
-  K10Kr.display();
-  K100Kr.display();
-  K1000Kr.display();
+  for(Knap a: knapper)
+    a.display();
+    
   Deposit.display();
   Penge.display();
 
 }
 
 void mouseClicked(){
-  for(KnapToggle a: knapper)
-  a.klikket();
+  for(Knap a: knapper)
+    a.klikket();
 }
