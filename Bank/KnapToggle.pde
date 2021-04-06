@@ -20,4 +20,11 @@ class KnapToggle extends Knap{
     
   }
   
+  void klikket(){
+    
+    if(dist(x+w/2,y+h/2,mouseX,mouseY)<50)
+    erValgt = !erValgt;
+    
+  }
+  
 }
