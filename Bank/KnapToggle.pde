@@ -25,11 +25,8 @@ class KnapToggle extends Knap{
     strokeWeight(sizeStroke);
   }
   
-  void klikket(){
-    
-    if(dist(x + w / 2, y + h / 2, mouseX ,mouseY) < 50)
+  void klikFunktionalitet(){
     erValgt = !erValgt;
-    
   }
   
   void addPenge(KontoFelt konto_) {

@@ -1,3 +1,4 @@
+//Knep var en stavefejl btw
 class Knap extends Komponent{
   
   boolean trykket;
@@ -10,11 +11,15 @@ class Knap extends Komponent{
   
   void klikket(){
     
-    if(dist(x + w / 2, y + h / 2, mouseX ,mouseY) < 50) {
+    if(abs(mouseX - x) < w && abs(mouseY - y) < h) {
+      klikFunktionalitet();
+    }
+    
+  }
+  
+  void klikFunktionalitet(){
       K10Kr.addPenge(Penge);
       K100Kr.addPenge(Penge);
       K1000Kr.addPenge(Penge);
-    }
-    
   }
 }
