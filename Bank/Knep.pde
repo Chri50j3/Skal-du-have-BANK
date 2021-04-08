@@ -1,4 +1,3 @@
-//Knep var en stavefejl btw
 class Knap extends Komponent{
   
   boolean trykket;
