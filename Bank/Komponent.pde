@@ -11,7 +11,9 @@ class Komponent {
   color colSec = color(200);
   float sizeStroke = 1;
   
-  Komponent(float x_, float y_, String tekst_) {
+  PApplet p;
+  
+  Komponent(float x_, float y_, String tekst_, PApplet p) {
     
     x = x_;
     y = y_;
@@ -20,20 +22,22 @@ class Komponent {
     tekstX = x + w / 2;
     tekstY = y + h / 2;
     
+    this.p=p;
+    
   }
   
   void display(){
     
-    fill(colSec);
-    stroke(colPri);
-    rect(x, y, w, h);
+    p.fill(colSec);
+    p.stroke(colPri);
+    p.rect(x, y, w, h);
     
     lavTekst();
   }
   
   void lavTekst() {
     
-    fill(colPri);
-    text(tekst, tekstX, tekstY);
+    p.fill(colPri);
+    p.text(tekst, tekstX, tekstY);
   }
 }

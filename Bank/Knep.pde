@@ -2,23 +2,22 @@ class Knap extends Komponent{
   
   boolean trykket;
   
-  Knap(float x_, float y_, String tekst_) {
+  Knap(float x_, float y_, String tekst_,PApplet p) {
     
-    super(x_, y_, tekst_);
+    super(x_, y_, tekst_,p);
     
   }
   
   void klikket(){
     
-    if(abs(mouseX - x) < w && abs(mouseY - y) < h) {
+    if(abs(mouseX - (x+w/2)) < w/2 && abs(mouseY - (y+h/2)) < h/2) {
       klikFunktionalitet();
     }
-    
   }
   
   void klikFunktionalitet(){
-      K10Kr.addPenge(Penge);
-      K100Kr.addPenge(Penge);
-      K1000Kr.addPenge(Penge);
+    addPenge(Penge);
   }
+
+  
 }

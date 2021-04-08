@@ -5,9 +5,9 @@ class KnapToggle extends Knap{
   
   float sizeStrokeBig = 5;
   
-  KnapToggle(float x_, float y_, int value_) {
+  KnapToggle(float x_, float y_, int value_,PApplet p) {
     
-    super(x_, y_, value_ + "kr");
+    super(x_, y_, value_ + "kr",p);
     
     value = value_;
     
@@ -16,26 +16,17 @@ class KnapToggle extends Knap{
   void display() {
     
     if(erValgt)
-      strokeWeight(sizeStrokeBig);
+      p.strokeWeight(sizeStrokeBig);
     else
-      strokeWeight(sizeStroke);
+      p.strokeWeight(sizeStroke);
 
     super.display();
     
-    strokeWeight(sizeStroke);
+    p.strokeWeight(sizeStroke);
   }
   
   void klikFunktionalitet(){
     erValgt = !erValgt;
-  }
-  
-  void addPenge(KontoFelt konto_) {
-    
-    if(!erValgt)
-      return;
-      
-    konto_.add(value);
-    
   }
   
 }

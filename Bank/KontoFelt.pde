@@ -2,9 +2,9 @@ class KontoFelt extends Komponent{
   
   float tekstYOffset;
   
-  KontoFelt(float x_, float y_, String tekst_) {
+  KontoFelt(float x_, float y_, String tekst_, PApplet p) {
     
-    super(x_, y_, tekst_);
+    super(x_, y_, tekst_, p);
     
     tekstYOffset = h * 0.4f;
     tekstY = y + tekstYOffset;
@@ -19,7 +19,7 @@ class KontoFelt extends Komponent{
   void lavTekst() {
     
     super.lavTekst();
-    text(balance + "kr", tekstX, tekstY + tekstYOffset);
+    p.text(balance + "kr", tekstX, tekstY + tekstYOffset);
     
   }
 
