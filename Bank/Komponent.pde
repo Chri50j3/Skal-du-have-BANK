@@ -22,7 +22,7 @@ class Komponent {
     tekstX = x + w / 2;
     tekstY = y + h / 2;
     
-    this.p=p;
+    this.p = p;
     
   }
   

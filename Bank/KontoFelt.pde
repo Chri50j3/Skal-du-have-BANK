@@ -12,10 +12,6 @@ class KontoFelt extends Komponent{
   
   int balance;
 
-  void add(float V_ind){
-    balance += V_ind;
-  }
-
   void lavTekst() {
     
     super.lavTekst();

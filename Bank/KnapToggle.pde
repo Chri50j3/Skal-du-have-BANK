@@ -5,12 +5,16 @@ class KnapToggle extends Knap{
   
   float sizeStrokeBig = 5;
   
-  KnapToggle(float x_, float y_, int value_,PApplet p) {
+  KnapToggle(float x_, float y_, int value_, PApplet p) {
     
-    super(x_, y_, value_ + "kr",p);
+    super(x_, y_, value_ + "kr", p);
     
     value = value_;
+  }
+  
+  KnapToggle(float x_, float y_, PApplet p) {
     
+    super(x_, y_, "Ikke intastet", p);
   }
   
   void display() {
@@ -28,5 +32,4 @@ class KnapToggle extends Knap{
   void klikFunktionalitet(){
     erValgt = !erValgt;
   }
-  
 }
